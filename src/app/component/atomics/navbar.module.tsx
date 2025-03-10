@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full bg-gray-800 text-white shadow-md">
+    <nav className="w-full bg-gray-800 text-white shadow-md sticky top-0">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -32,18 +32,14 @@ const Navbar: React.FC = () => {
           <a href="/" className="py-2 px-4 hover:bg-gray-700 rounded">
             Home
           </a>
-          <a href="/about" className="py-2 px-4 hover:bg-gray-700 rounded">
-            About
-          </a>
-          <a href="#services" className="py-2 px-4 hover:bg-gray-700 rounded">
-            Services
-          </a>
-          <a href="#contact" className="py-2 px-4 hover:bg-gray-700 rounded">
-            Contact
-          </a>
-
           <a href="/product" className="py-2 px-4 hover:bg-gray-700 rounded">
             Product
+          </a>
+          <a href="/teams" className="py-2 px-4 hover:bg-gray-700 rounded">
+            Teams
+          </a>
+          <a href="/about" className="py-2 px-4 hover:bg-gray-700 rounded">
+            About Us
           </a>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function LandingPage() {
       <div
         className="w-full h-screen relative"
         style={{
-          backgroundImage: `url('${bgImage[0]}')`,
+          backgroundImage: `url('${bgImage[3]}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -53,19 +53,55 @@ export default function LandingPage() {
       {/* Service Section */}
       <div
         id="service"
-        className="w-full h-screen bg-white py-10 px-4 gap-5 flex flex-col-3"
+        className="w-full h-screen bg-slate-200 py-10 px-4 gap-5 flex flex-col-3"
       >
-        <div className="w-full h-full bg-pink-500">
-          <h1 className="text-5xl py-7">Our Service</h1>
+        {/* Desain 1 */}
+        <div className="relative w-full h-full bg-blue-300">
+          <img
+            className="w-full h-full object-cover opacity-70" // Adjusted opacity
+            src={bgImage[0]}
+            alt="Design"
+          />
+          <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
+          {/* Overlay with opacity */}
+          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+            <h1 className="text-3xl font-bold text-orange-500">Design</h1>
+            <p className="mt-2 text-lg">
+              We create beautiful and user-friendly designs tailored to your
+              needs.
+            </p>
+          </div>
         </div>
 
-        <div className="w-full h-full bg-blue-500">
-          <img className="w-screen h-1/2" src={bgImage[2]} alt="" />
-          <h1>Interior-Design</h1>
+        {/* Desain 2 */}
+        <div className="relative w-full h-full bg-blue-950">
+          <img
+            className="w-full h-full object-cover opacity-10"
+            src={bgImage[5]}
+            alt="Development"
+          />
+          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+            <h1 className="text-3xl font-bold text-orange-500">Development</h1>
+            <p className="mt-2 text-lg">
+              Our development team builds scalable and robust web applications.
+            </p>
+          </div>
         </div>
 
-        <div className="w-full h-full bg-orange-500">
-          <img className="w-full h-full" src={bgImage[3]} alt="" />
+        {/* Desain 3 */}
+        <div className="relative w-full h-full bg-orange-500">
+          <img
+            className="w-full h-full object-cover"
+            src={bgImage[4]}
+            alt="Marketing"
+          />
+          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+            <h1 className="text-3xl font-bold text-orange-500">Marketing</h1>
+            <p className="mt-2 text-lg">
+              We provide marketing solutions to help your brand grow and reach
+              its full potential.
+            </p>
+          </div>
         </div>
       </div>
     </div>
