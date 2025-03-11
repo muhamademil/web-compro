@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { getBackgroundImage } from "@/lib/products/imageUrl";
 import Navbar from "./component/atomics/navbar.module";
+import Footer from "./component/atomics/footer.module";
 
 export default function LandingPage() {
   const [bgImage, setBgImage] = useState<string[]>([]);
@@ -53,18 +54,18 @@ export default function LandingPage() {
       {/* Service Section */}
       <div
         id="service"
-        className="w-full h-screen bg-slate-200 py-10 px-4 gap-5 flex flex-col-3"
+        className="w-full h-screen bg-slate-200 py-10 px-4 gap-5 flex flex-col lg:grid lg:grid-cols-3 lg:gap-8"
       >
         {/* Desain 1 */}
-        <div className="relative w-full h-full bg-blue-300">
+        <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
           <img
-            className="w-full h-full object-cover opacity-70" // Adjusted opacity
+            className="w-full h-full object-cover opacity-70"
             src={bgImage[0]}
             alt="Design"
           />
           <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
           {/* Overlay with opacity */}
-          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
             <h1 className="text-3xl font-bold text-orange-500">Design</h1>
             <p className="mt-2 text-lg">
               We create beautiful and user-friendly designs tailored to your
@@ -74,13 +75,15 @@ export default function LandingPage() {
         </div>
 
         {/* Desain 2 */}
-        <div className="relative w-full h-full bg-blue-950">
+        <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
           <img
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-70"
             src={bgImage[5]}
             alt="Development"
           />
-          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+          <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
+          {/* Overlay with opacity */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
             <h1 className="text-3xl font-bold text-orange-500">Development</h1>
             <p className="mt-2 text-lg">
               Our development team builds scalable and robust web applications.
@@ -89,13 +92,15 @@ export default function LandingPage() {
         </div>
 
         {/* Desain 3 */}
-        <div className="relative w-full h-full bg-orange-500">
+        <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
             src={bgImage[4]}
             alt="Marketing"
           />
-          <div className="absolute inset-0 flex justify-center items-center text-center text-white">
+          <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
+          {/* Overlay with opacity */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
             <h1 className="text-3xl font-bold text-orange-500">Marketing</h1>
             <p className="mt-2 text-lg">
               We provide marketing solutions to help your brand grow and reach
@@ -104,6 +109,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
