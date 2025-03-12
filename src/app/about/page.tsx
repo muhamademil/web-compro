@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { getTestimonials, ITestimonials } from "@/lib/products/testimonials";
+import React from "react";
 
 const About = () => {
   return (

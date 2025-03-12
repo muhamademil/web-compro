@@ -14,15 +14,15 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScrolled(true); // Change navbar style when scrolling down
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false); // Revert back to original style when at the top
+        setIsScrolled(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup event listener on component unmount
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

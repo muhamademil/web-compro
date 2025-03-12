@@ -1,6 +1,5 @@
 import React from "react";
 import ProductList from "../component/molucules/product.module";
-import Navbar from "../component/atomics/navbar.module";
 
 export default function Product() {
   return (
