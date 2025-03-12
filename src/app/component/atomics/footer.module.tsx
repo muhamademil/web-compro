@@ -1,78 +1,99 @@
 // components/Footer.tsx
 import React from "react";
+import {
+  FaFacebookF,
+  FaTiktok,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-6">
+    <footer className="bg-gray-900 text-gray-400 py-10">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
-          <div className="text-center md:text-left mb-6 md:mb-0">
-            <h2 className="text-3xl font-bold text-orange-500">YourBrand</h2>
-            <p className="mt-2 text-sm text-gray-400">
+          <div>
+            <h2 className="text-3xl font-bold text-orange-700 mb-3">
+              Space Enough
+            </h2>
+            <p className="text-sm leading-relaxed">
               Delivering the best services and products to grow your business.
             </p>
           </div>
 
           {/* Footer Navigation */}
-          <div className="flex flex-col md:flex-row gap-6 mb-6 md:mb-0">
-            <a href="/about" className="text-sm text-gray-400 hover:text-white">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-orange-700 text-lg font-semibold mb-2">
+              Quick Links
+            </h3>
+            <a
+              href="/about"
+              className="hover:text-white transition-colors duration-200 text-sm"
+            >
               About Us
             </a>
             <a
-              href="#services"
-              className="text-sm text-gray-400 hover:text-white"
+              href="/teams"
+              className="hover:text-white transition-colors duration-200 text-sm"
             >
-              Services
-            </a>
-            <a
-              href="#contact"
-              className="text-sm text-gray-400 hover:text-white"
-            >
-              Contact
-            </a>
-            <a
-              href="#privacy"
-              className="text-sm text-gray-400 hover:text-white"
-            >
-              Privacy Policy
+              Teams
             </a>
           </div>
 
           {/* Social Media Links */}
-          <div className="flex space-x-4">
-            <a
-              href="https://facebook.com"
-              className="text-gray-400 hover:text-white"
-            >
-              <i className="fab fa-facebook-f"></i> {/* Facebook icon */}
-            </a>
-            <a
-              href="https://twitter.com"
-              className="text-gray-400 hover:text-white"
-            >
-              <i className="fab fa-twitter"></i> {/* Twitter icon */}
-            </a>
-            <a
-              href="https://linkedin.com"
-              className="text-gray-400 hover:text-white"
-            >
-              <i className="fab fa-linkedin-in"></i> {/* LinkedIn icon */}
-            </a>
-            <a
-              href="https://instagram.com"
-              className="text-gray-400 hover:text-white"
-            >
-              <i className="fab fa-instagram"></i> {/* Instagram icon */}
-            </a>
+          <div>
+            <h3 className="text-orange-700 text-lg font-semibold mb-2">
+              Follow Us
+            </h3>
+            <div className="flex space-x-4">
+              <FooterIcon
+                href="https://facebook.com"
+                icon={<FaFacebookF size={20} />}
+              />
+              <FooterIcon
+                href="https://tiktok.com"
+                icon={<FaTiktok size={20} />}
+              />
+              <FooterIcon
+                href="https://linkedin.com"
+                icon={<FaLinkedinIn size={20} />}
+              />
+              <FooterIcon
+                href="https://instagram.com"
+                icon={<FaInstagram size={20} />}
+              />
+            </div>
           </div>
         </div>
 
+        {/* Divider */}
+        <div className="border-t border-gray-700 my-8" />
+
         {/* Footer Bottom */}
-        <div className="text-center mt-6 text-sm text-gray-500">
-          <p>&copy; 2025 YourBrand. All Rights Reserved.</p>
+        <div className="text-center text-xs text-gray-500">
+          &copy; {new Date().getFullYear()} Space Enough. All Rights Reserved.
         </div>
       </div>
     </footer>
   );
 }
+
+// Komponen untuk social media icon (biar konsisten styling-nya)
+const FooterIcon = ({
+  href,
+  icon,
+}: {
+  href: string;
+  icon: React.ReactNode;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white transition-colors duration-200"
+  >
+    {icon}
+  </a>
+);
