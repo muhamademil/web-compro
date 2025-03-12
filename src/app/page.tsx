@@ -20,7 +20,7 @@ export default function LandingPage() {
       <div
         className="w-full h-screen relative"
         style={{
-          backgroundImage: `url('${bgImage[3]}')`,
+          backgroundImage: `url('${bgImage[5]}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -44,13 +44,13 @@ export default function LandingPage() {
 
             {/* Buttons Section */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#service">
+              <a href="#services">
                 <button className="bg-blue-600 text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold shadow-md hover:scale-105 transition-transform duration-200 focus:outline-none">
                   Explore Services
                 </button>
               </a>
 
-              <a href="#about">
+              <a href="/about">
                 <button className="bg-transparent border border-white text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold shadow-md hover:scale-105 transition-transform duration-200 focus:outline-none">
                   Learn More
                 </button>
@@ -62,79 +62,89 @@ export default function LandingPage() {
 
       {/* Service Section */}
       <div
-        id="service"
-        className="w-full h-screen bg-slate-200 py-16 px-4 flex flex-col items-center"
+        id="services"
+        className="w-full min-h-screen bg-slate-200 py-16 px-4 flex flex-col items-center"
       >
         {/* Heading Section */}
         <div className="mb-12 text-center max-w-2xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-            Our Services
+            Our Interior Design Services
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            We offer a range of services to meet your business needs. From
-            creative design, solid development, to powerful marketing
-            strategies, we help you grow and stand out.
+            Transform your space into something extraordinary with our
+            professional interior design services. We specialize in creating
+            functional, stylish, and comfortable environments tailored to your
+            needs.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="w-full grid gap-6 lg:grid-cols-3 max-w-7xl">
-          {/* Service 1 */}
-          <div className="relative w-full h-90 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
+          {/* Service 1: Living Room Design */}
+          <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
+            <img
+              className="w-full h-full object-cover opacity-70"
+              src={bgImage[1]}
+              alt="Living Room Design"
+            />
+            <div className="absolute inset-0 bg-black opacity-40"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+              <h3 className="text-2xl font-bold text-orange-500 mb-2">
+                Living Room Design
+              </h3>
+              <p className="text-sm leading-relaxed">
+                Cozy and elegant living room concepts that reflect your
+                lifestyle with modern and minimalist aesthetics.
+              </p>
+            </div>
+          </div>
+
+          {/* Service 2: Office Space Design */}
+          <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
+            <img
+              className="w-full h-full object-cover opacity-70"
+              src={bgImage[3]}
+              alt="Office Design"
+            />
+            <div className="absolute inset-0 bg-black opacity-40"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+              <h3 className="text-2xl font-bold text-orange-500 mb-2">
+                Office Space Design
+              </h3>
+              <p className="text-sm leading-relaxed">
+                Productive and ergonomic office interiors that foster creativity
+                and enhance work efficiency.
+              </p>
+            </div>
+          </div>
+
+          {/* Service 3: Home Renovation */}
+          <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
             <img
               className="w-full h-full object-cover opacity-70"
               src={bgImage[0]}
-              alt="Design"
+              alt="Home Renovation"
             />
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h3 className="text-3xl font-bold text-orange-500 mb-2">
-                Design
+              <h3 className="text-2xl font-bold text-orange-500 mb-2">
+                Home Renovation
               </h3>
               <p className="text-sm leading-relaxed">
-                Beautiful and user-friendly designs tailored to your brand and
-                goals.
+                Complete renovation services to give your home a fresh, modern,
+                and luxurious feel.
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Service 2 */}
-          <div className="relative w-full h-90 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <img
-              className="w-full h-full object-cover opacity-70"
-              src={bgImage[5]}
-              alt="Development"
-            />
-            <div className="absolute inset-0 bg-black opacity-40"></div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h3 className="text-3xl font-bold text-orange-500 mb-2">
-                Development
-              </h3>
-              <p className="text-sm leading-relaxed">
-                Scalable, robust web applications built with cutting-edge
-                technologies.
-              </p>
-            </div>
-          </div>
-
-          {/* Service 3 */}
-          <div className="relative w-full h-90 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <img
-              className="w-full h-full object-cover opacity-70"
-              src={bgImage[4]}
-              alt="Marketing"
-            />
-            <div className="absolute inset-0 bg-black opacity-40"></div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h3 className="text-3xl font-bold text-orange-500 mb-2">
-                Marketing
-              </h3>
-              <p className="text-sm leading-relaxed">
-                Powerful strategies to help your brand grow and reach its full
-                potential.
-              </p>
-            </div>
-          </div>
+        <div className="mt-12">
+          <a
+            href="/product"
+            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300"
+          >
+            Explore Our Products
+          </a>
         </div>
       </div>
 

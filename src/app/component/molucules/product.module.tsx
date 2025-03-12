@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getProducts, IProduct } from "@/lib/products/product";
 
 interface ProductListProps {
@@ -9,12 +8,12 @@ interface ProductListProps {
 }
 
 export default function ProductList({ limit, category }: ProductListProps) {
-  const [products, setproducts] = useState<IProduct[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
       const data = await getProducts(limit, category);
-      setproducts(data);
+      setProducts(data);
     };
     fetchProducts();
   }, [limit, category]);
@@ -28,13 +27,18 @@ export default function ProductList({ limit, category }: ProductListProps) {
           {products.map((product, index) => (
             <div
               key={index}
-              className="card bg-white flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-shadow duration-300 p-4"
+              className="bg-white flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-4 cursor-pointer transform hover:scale-105"
             >
-              <img
-                className="w-full h-48 object-cover rounded-t-md mb-4"
-                src={product.imageUrl}
-                alt={product.title}
-              />
+              {/* Gambar Produk */}
+              <div className="overflow-hidden rounded-t-md mb-4">
+                <img
+                  className="w-full h-48 object-cover"
+                  src={product.imageUrl}
+                  alt={product.title}
+                />
+              </div>
+
+              {/* Konten Produk */}
               <h3 className="text-lg font-semibold text-gray-900">
                 {product.title}
               </h3>
@@ -49,7 +53,7 @@ export default function ProductList({ limit, category }: ProductListProps) {
           ))}
         </div>
       ) : (
-        <p className="text-center text-pink-800 font-semibold">
+        <p className="text-center text-gray-800 font-semibold">
           No Products Available
         </p>
       )}

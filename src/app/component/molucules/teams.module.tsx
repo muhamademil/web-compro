@@ -22,14 +22,14 @@ export default function TeamMembers() {
   }, []);
 
   return (
-    <section className="bg-gray-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-28 pb-24 min-h-screen sm:px-10 lg:px-6 bg-slate-300">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+          <h1 className="text-xl font-extrabold text-gray-900 mb-4">
             Meet Our Amazing Team
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base text-gray-600 max-w-5xl mx-auto">
             We are a team of dedicated professionals passionate about helping
             businesses grow. With years of experience and diverse skills, we are
             committed to delivering innovative solutions and exceptional

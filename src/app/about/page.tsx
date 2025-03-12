@@ -53,11 +53,11 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Service 1 */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
               <h3 className="text-2xl font-bold text-orange-500 mb-4">
                 Residential Design
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 We create warm and inviting home interiors tailored to your
                 personality and lifestyle. From modern minimalism to classic
                 elegance, we bring your vision to life.
@@ -65,11 +65,11 @@ const About = () => {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
               <h3 className="text-2xl font-bold text-orange-500 mb-4">
                 Commercial Spaces
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Our commercial interior solutions are designed to maximize
                 productivity and impress clients. We craft inspiring workspaces,
                 retail stores, and hospitality venues.
@@ -77,16 +77,24 @@ const About = () => {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
               <h3 className="text-2xl font-bold text-orange-500 mb-4">
                 Custom Furniture & Decor
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 We design and build bespoke furniture and decorative pieces that
                 perfectly complement your space. Every piece is crafted with
                 care by our skilled artisans.
               </p>
             </div>
+          </div>
+          <div className="mt-12">
+            <a
+              href="/product"
+              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300"
+            >
+              Explore Our Products
+            </a>
           </div>
         </div>
       </section>
