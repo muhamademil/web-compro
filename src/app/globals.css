@@ -1,15 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Tambahkan font poppins sebagai default */
+  --font-sans: "Poppins", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans); /* Sekarang pakai Poppins */
   --font-mono: var(--font-geist-mono);
+}
+
+@layer components {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #f97316 !important; /* Tailwind Orange-500 */
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    color: #ea580c !important; /* Tailwind Orange-600 */
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +35,9 @@
   }
 }
 
+/* Apply font secara global ke body */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
