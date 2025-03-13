@@ -98,8 +98,8 @@ export default function LandingPage() {
                 Living Room Design
               </h3>
               <p className="text-sm leading-relaxed">
-                Cozy and elegant living room concepts that reflect your
-                lifestyle with modern and minimalist aesthetics.
+                Cozy & elegant living room concepts that reflect your lifestyle
+                with modern and minimalist aesthetics.
               </p>
             </div>
           </div>
