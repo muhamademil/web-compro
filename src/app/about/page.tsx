@@ -11,7 +11,7 @@ const About = () => {
           <span className="text-orange-500 font-semibold">Interior Vision</span>
           , where design meets innovation. We are passionate about transforming
           spaces into elegant and functional environments tailored to your
-          lifestyle.
+          lifestyle
         </p>
       </section>
 
@@ -39,7 +39,7 @@ const About = () => {
             various projects that make a difference. From warm, personal
             residences, uniquely themed cafes, to inspiring workspaces, each
             project is delivered with dedication and a deep passion for design.
-            And this is just the beginning of our story.
+            And this is just the beginning of our story
           </p>
         </div>
       </div>
@@ -59,7 +59,7 @@ const About = () => {
               <p className="text-white leading-relaxed">
                 We create warm and inviting home interiors tailored to your
                 personality and lifestyle. From modern minimalism to classic
-                elegance, we bring your vision to life.
+                elegance, we bring your vision to life
               </p>
             </div>
 
@@ -71,7 +71,7 @@ const About = () => {
               <p className="text-white leading-relaxed">
                 Our commercial interior solutions are designed to maximize
                 productivity and impress clients. We craft inspiring workspaces,
-                retail stores, and hospitality venues.
+                retail stores, and hospitality venues
               </p>
             </div>
 
@@ -83,7 +83,7 @@ const About = () => {
               <p className="text-white leading-relaxed">
                 We design and build bespoke furniture and decorative pieces that
                 perfectly complement your space. Every piece is crafted with
-                care by our skilled artisans.
+                care by our skilled artisans
               </p>
             </div>
           </div>
@@ -104,7 +104,7 @@ const About = () => {
           <h2 className="text-4xl font-semibold text-gray-800">Get In Touch</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ready to transform your space? Contact us today for a consultation
-            and lets bring your vision to life.
+            and lets bring your vision to life
           </p>
           <button className="mt-8 bg-orange-500 text-white py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors duration-300">
             Contact Us
