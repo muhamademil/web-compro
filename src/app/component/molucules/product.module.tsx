@@ -83,13 +83,15 @@ export default function ProductList({ limit, category }: ProductListProps) {
           {filteredProducts.map((product, index) => (
             <div
               key={index}
-              className="bg-white flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-4 cursor-pointer transform hover:scale-105"
+              className="relative bg-white flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-4 cursor-pointer transform hover:scale-105"
             >
               <div className="overflow-hidden rounded-t-md mb-4">
                 <Image
                   className="w-full h-48 object-cover"
                   src={product.imageUrl}
                   alt={product.title}
+                  width={128}
+                  height={128}
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
