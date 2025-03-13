@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { getTestimonials, ITestimonials } from "@/lib/products/testimonials";
+import Image from "next/image";
 
 // Swiper import
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,7 +54,7 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white flex flex-col rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 h-full">
-                  <img
+                  <Image
                     className="w-full h-32 object-cover rounded-md mb-3"
                     src={testimonial.photo}
                     alt={testimonial.name}

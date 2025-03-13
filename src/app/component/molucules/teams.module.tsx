@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { getTeamMembers, ITeamMember } from "@/lib/products/teams";
+import Image from "next/image";
 
 export default function TeamMembers() {
   const [teamMembers, setTeamMembers] = useState<ITeamMember[]>([]);
@@ -51,7 +52,7 @@ export default function TeamMembers() {
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-8 flex flex-col items-center text-center"
               >
                 {/* Profile Picture */}
-                <img
+                <Image
                   className="w-32 h-32 object-cover rounded-full border-4 border-gray-200 mb-6"
                   src={member.photoUrl}
                   alt={member.name}

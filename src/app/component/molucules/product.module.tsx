@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { getProducts, IProduct } from "@/lib/products/product";
+import Image from "next/image";
 
 interface ProductListProps {
   limit?: number;
@@ -85,7 +86,7 @@ export default function ProductList({ limit, category }: ProductListProps) {
               className="bg-white flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out p-4 cursor-pointer transform hover:scale-105"
             >
               <div className="overflow-hidden rounded-t-md mb-4">
-                <img
+                <Image
                   className="w-full h-48 object-cover"
                   src={product.imageUrl}
                   alt={product.title}

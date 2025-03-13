@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { getBackgroundImage } from "@/lib/products/imageUrl";
 import TestimonialsSection from "./component/molucules/testimonial.module";
+import Image from "next/image";
 
 export default function LandingPage() {
   const [bgImage, setBgImage] = useState<string[]>([]);
@@ -82,7 +83,7 @@ export default function LandingPage() {
         <div className="w-full grid gap-6 lg:grid-cols-3 max-w-7xl">
           {/* Service 1: Living Room Design */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <img
+            <Image
               className="w-full h-full object-cover opacity-70"
               src={bgImage[1]}
               alt="Living Room Design"
@@ -101,7 +102,7 @@ export default function LandingPage() {
 
           {/* Service 2: Office Space Design */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <img
+            <Image
               className="w-full h-full object-cover opacity-70"
               src={bgImage[3]}
               alt="Office Design"
@@ -120,7 +121,7 @@ export default function LandingPage() {
 
           {/* Service 3: Home Renovation */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <img
+            <Image
               className="w-full h-full object-cover opacity-70"
               src={bgImage[0]}
               alt="Home Renovation"
