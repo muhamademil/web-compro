@@ -26,17 +26,17 @@ const About = () => {
             Founded in 2025, SpaceEnough was born from a simple dream: to create
             spaces that are not only beautiful but also meaningful. Starting
             from a small studio, we committed ourselves to delivering interior
-            designs that reflect each client’s personality, lifestyle, and
-            unique needs. In a world that’s constantly evolving, we believe that
-            space is an extension of who we are. Every corner of a home, office,
-            or commercial area should tell a story. That’s why we embrace a
+            designs that reflect each clients personality, lifestyle, and unique
+            needs. In a world thats constantly evolving, we believe that space
+            is an extension of who we are. Every corner of a home, office, or
+            commercial area should tell a story. Thats why we embrace a
             personalized design approach, where every project begins with
-            listening and understanding our clients’ visions. With a team of
+            listening and understanding our clients visions. With a team of
             young, creative, and experienced designers, SpaceEnough blends
             functionality, aesthetic beauty, and innovation into every design.
-            We don’t just create spaces—we craft better living experiences.
-            Since our journey began in 2025, we are proud to have brought life
-            to various projects that make a difference. From warm, personal
+            We dont just create spaces—we craft better living experiences. Since
+            our journey began in 2025, we are proud to have brought life to
+            various projects that make a difference. From warm, personal
             residences, uniquely themed cafes, to inspiring workspaces, each
             project is delivered with dedication and a deep passion for design.
             And this is just the beginning of our story.
@@ -104,7 +104,7 @@ const About = () => {
           <h2 className="text-4xl font-semibold text-gray-800">Get In Touch</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ready to transform your space? Contact us today for a consultation
-            and let’s bring your vision to life.
+            and lets bring your vision to life.
           </p>
           <button className="mt-8 bg-orange-500 text-white py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors duration-300">
             Contact Us

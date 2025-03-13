@@ -40,7 +40,7 @@ export default function LandingPage() {
               Focused on delivering stylish and functional interior solutions,
               we turn your personal vision into reality. With careful
               craftsmanship, innovative design, and a strong commitment to
-              quality, we create spaces that inspire and endure.
+              quality, we create spaces that inspire and endure
             </p>
 
             {/* Buttons Section */}
@@ -75,7 +75,7 @@ export default function LandingPage() {
             Transform your space into something extraordinary with our
             professional interior design services. We specialize in creating
             functional, stylish, and comfortable environments tailored to your
-            needs.
+            needs
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export default function LandingPage() {
               </h3>
               <p className="text-sm leading-relaxed">
                 Cozy & elegant living room concepts that reflect your lifestyle
-                with modern and minimalist aesthetics.
+                with modern and minimalist aesthetics
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function LandingPage() {
               </h3>
               <p className="text-sm leading-relaxed">
                 Productive and ergonomic office interiors that foster creativity
-                and enhance work efficiency.
+                and enhance work efficiency
               </p>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function LandingPage() {
               </h3>
               <p className="text-sm leading-relaxed">
                 Complete renovation services to give your home a fresh, modern,
-                and luxurious feel.
+                and luxurious feel
               </p>
             </div>
           </div>

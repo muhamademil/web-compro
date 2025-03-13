@@ -102,7 +102,7 @@ export default function TeamMembers() {
           </div>
         ) : (
           <p className="text-center text-gray-500 text-sm">
-            No team members available at this time.
+            No team members available at this time
           </p>
         )}
       </div>
