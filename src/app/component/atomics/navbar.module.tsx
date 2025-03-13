@@ -1,16 +1,16 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
+import Link from "next/link"; // ✅ Import Link dari next/link
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Handle scroll event to change navbar style
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -21,9 +21,7 @@ const Navbar: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -37,15 +35,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <a
+          <Link
             href="/"
             className="text-2xl font-bold hover:text-orange-500 transition-colors duration-300"
           >
             Space Enough
-          </a>
+          </Link>
         </div>
 
-        {/* Menu Button for Mobile */}
+        {/* Mobile menu button */}
         <div className="lg:hidden">
           <button onClick={toggleMenu} className="text-white text-2xl">
             {isOpen ? "✖" : "☰"}
@@ -58,30 +56,30 @@ const Navbar: React.FC = () => {
             isOpen ? "block" : "hidden"
           } lg:flex space-x-6 items-center`}
         >
-          <a
+          <Link
             href="/"
             className="py-2 px-4 hover:bg-slate-400 rounded transition-colors duration-300"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/product"
             className="py-2 px-4 hover:bg-slate-400 rounded transition-colors duration-300"
           >
             Product
-          </a>
-          <a
+          </Link>
+          <Link
             href="/teams"
             className="py-2 px-4 hover:bg-slate-400 rounded transition-colors duration-300"
           >
             Teams
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="py-2 px-4 hover:bg-slate-400 rounded transition-colors duration-300"
           >
             About Us
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
