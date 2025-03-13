@@ -53,11 +53,13 @@ export default function TestimonialsSection() {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white flex flex-col rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 h-full">
+                <div className="relative bg-white flex flex-col rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 h-full">
                   <Image
                     className="w-full h-32 object-cover rounded-md mb-3"
                     src={testimonial.photo}
                     alt={testimonial.name}
+                    width={128}
+                    height={128}
                   />
                   <h3 className="text-base font-semibold text-gray-900 mb-1">
                     {testimonial.name}

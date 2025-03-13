@@ -21,7 +21,7 @@ export default function LandingPage() {
       <div
         className="w-full h-screen relative"
         style={{
-          backgroundImage: `url('${bgImage[5]}')`,
+          backgroundImage: bgImage[5] ? `url('${bgImage[5]}')` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -83,11 +83,15 @@ export default function LandingPage() {
         <div className="w-full grid gap-6 lg:grid-cols-3 max-w-7xl">
           {/* Service 1: Living Room Design */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <Image
-              className="w-full h-full object-cover opacity-70"
-              src={bgImage[1]}
-              alt="Living Room Design"
-            />
+            {bgImage[1] && (
+              <Image
+                className=" object-cover opacity-70"
+                src={bgImage[1]}
+                alt="Living Room Design"
+                fill
+              />
+            )}
+
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
               <h3 className="text-2xl font-bold text-orange-500 mb-2">
@@ -102,11 +106,15 @@ export default function LandingPage() {
 
           {/* Service 2: Office Space Design */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <Image
-              className="w-full h-full object-cover opacity-70"
-              src={bgImage[3]}
-              alt="Office Design"
-            />
+            {bgImage[3] && (
+              <Image
+                className=" object-cover opacity-70"
+                src={bgImage[3]}
+                alt="Office Design"
+                fill
+              />
+            )}
+
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
               <h3 className="text-2xl font-bold text-orange-500 mb-2">
@@ -121,11 +129,15 @@ export default function LandingPage() {
 
           {/* Service 3: Home Renovation */}
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <Image
-              className="w-full h-full object-cover opacity-70"
-              src={bgImage[0]}
-              alt="Home Renovation"
-            />
+            {bgImage[0] && (
+              <Image
+                className=" object-cover opacity-70"
+                src={bgImage[0]}
+                alt="Office Design"
+                fill
+              />
+            )}
+
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
               <h3 className="text-2xl font-bold text-orange-500 mb-2">

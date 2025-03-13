@@ -49,13 +49,15 @@ export default function TeamMembers() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-8 flex flex-col items-center text-center"
+                className="relative bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-8 flex flex-col items-center text-center"
               >
                 {/* Profile Picture */}
                 <Image
                   className="w-32 h-32 object-cover rounded-full border-4 border-gray-200 mb-6"
                   src={member.photoUrl}
                   alt={member.name}
+                  width={128}
+                  height={128}
                 />
 
                 {/* Name & Position */}
